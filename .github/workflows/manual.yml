@@ -31,5 +31,4 @@ jobs:
 
     steps:
     - name: Send greeting
-      run: echo "hello"  
-	  
+      run: echo "hello"
