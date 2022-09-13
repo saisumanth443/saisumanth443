@@ -22,3 +22,4 @@ jobs:
     - name: echo install
       run: |
         echo "${{ inputs.Release }}"
+        echo "${GITHUB_REF##*/}"
