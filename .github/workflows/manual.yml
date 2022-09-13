@@ -21,4 +21,4 @@ jobs:
     
     - name: echo install
       run: |
-        echo "hello hello"
+        echo "${{ inputs.Release }}"
