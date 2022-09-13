@@ -1,34 +1,22 @@
-name: Mixed inputs
+name: CI
 
 on:
+  
   workflow_dispatch:
     inputs:
-      name:
-        type: choice
-        description: Who to greet
-        options: 
-        - monalisa
-        - cschleiden
-      message:
-        required: true
-      use-emoji:
+      Release:
         type: boolean
-        description: Include  emojis
-      environment:
-        type: environment
+        description: Release
 
 jobs:
-  greet:
+  build:
 
     runs-on: ubuntu-latest
-
+           
     steps:
-    - name: Send greeting
-      run: echo "hi"  
-  greet2:
-    if: github.event.inputs.use-emoji == 'true'
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Send greeting
-      run: echo "hello"
+    - uses: actions/checkout@v1
+    
+    
+    - name: echo install
+      run: |
+        echo "hello hello"
